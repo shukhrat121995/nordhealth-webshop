@@ -49,3 +49,5 @@ Now you can run the project with this command
 ```
 python manage.py runserver
 ```
+
+And access http://127.0.0.1:8000/
