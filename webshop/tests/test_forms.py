@@ -34,6 +34,3 @@ class TestForms(SimpleTestCase):
             'message': ''
         })
         self.assertFalse(form.is_valid())
-
-
-

@@ -15,7 +15,7 @@ class TestModels(TestCase):
             password='HelloWord',
         )
         department = Department.objects.create(
-            name='Vegetables',
+            name='Fruits',
         )
         country = Country.objects.create(
             name='Brazil'
@@ -48,8 +48,8 @@ class TestModels(TestCase):
         self.assertEqual(user.is_superuser, True)
 
     def test_department_object(self):
-        department = Department.objects.get(name='Vegetables')
-        self.assertEqual(department.name, 'Vegetables')
+        department = Department.objects.get(name='Fruits')
+        self.assertEqual(department.name, 'Fruits')
 
     def test_country_object(self):
         country = Country.objects.get(name='Brazil')
@@ -61,7 +61,7 @@ class TestModels(TestCase):
         self.assertEqual(product.description, 'Bananas from Brazil')
         self.assertEqual(product.image, 'https://www.collinsdictionary.com/images/full/banana_64728013.jpg')
         self.assertEqual(product.code, 'baba-123')
-        self.assertEqual(product.department.name, 'Vegetables')
+        self.assertEqual(product.department.name, 'Fruits')
         self.assertEqual(product.origin.name, 'Brazil')
         self.assertEqual(product.price, 2.5)
         self.assertEqual(product.weight, 1.2)
